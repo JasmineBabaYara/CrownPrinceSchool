@@ -15,29 +15,30 @@ export default function Navigation() {
   const closeMenu = () => setOpen(false);
 
   //function to determine whether screen is being scrolled
-  useEffect(() => {
-    //disable scroll on menu open
-    if (open === true) {
-      document.querySelector('body').style.overflow = 'hidden';
-    } else {
-      document.querySelector('body').style.overflow = 'scroll';
-    }
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const shouldAddBackground = scrollPosition > 0;
+  // useEffect(() => {
+  //   //disable scroll on menu open
+  //   if (open === true) {
+  //     document.querySelector('body').style.overflow = 'hidden';
+  //   } else {
+  //     document.querySelector('body').style.overflow = 'scroll';
+  //   }
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     const shouldAddBackground = scrollPosition > 0;
 
-      //if screen is moved add background color
-      setIsScrolled(shouldAddBackground);
-    };
+  //     //if screen is moved add background color
+  //     setIsScrolled(shouldAddBackground);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, [open]);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, [open]);
+
   return (
-    <div className={`lg:fixed z-10 w-full h-32 bg-transparent flex lg:items-center justify-center p-10 navbar ${isScrolled ? "scrolled" : ""}`}>
+    <div className={`lg:fixed z-10 w-full h-32 bg-transparent flex lg:items-center justify-center p-10 navbar `}>
      <div className="sidemenu lg:hidden" onClick={handleOpen}>
           {open ? (
             <FaTimes size={30} color={"#A67B5B"} onClick={() => closeMenu()} />
