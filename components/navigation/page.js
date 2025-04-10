@@ -2,10 +2,17 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
+import { FaBars, FaTimes } from "react-icons/fa";
 
 export default function Navigation() {
   const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState();
+
+  //responsive mode
+  const [open, setOpen] = useState(false);
+  const handleOpen = () => setOpen(!open);
+
+  const closeMenu = () => setOpen(false);
 
   //function to determine whether screen is being scrolled
   useEffect(() => {
@@ -30,11 +37,17 @@ export default function Navigation() {
     };
   }, [open]);
   return (
-    <div className={`fixed z-10 w-full h-32 bg-transparent flex items-center justify-center p-10 navbar ${isScrolled ? "scrolled" : ""}`}>
-      <div>
+    <div className={`lg:fixed z-10 w-full h-32 bg-transparent flex lg:items-center justify-center p-10 navbar ${isScrolled ? "scrolled" : ""}`}>
+     <div className="sidemenu lg:hidden" onClick={handleOpen}>
+          {open ? (
+            <FaTimes size={30} color={"#A67B5B"} onClick={() => closeMenu()} />
+          ) : (
+            <FaBars size={30} color={"#A67B5B"} />
+          )}
+        </div>
+        <div className={open ? "nav-menu active" : 'nav-menu flex gap-x-10'}>
         <p className='uppercase text-7xl text-black ml-20 mr-20' style={{ fontFamily: 'nautilus_pompilius' }}>CPS</p>
-      </div>
-      <div className='flex gap-x-10'>
+      
         <Link href="/" className={`uppercase text-base text-black relative ${pathname === '/' ? 'active' : ''}`}>Home</Link>
         <Link href="#about" className={`uppercase text-base text-black relative ${pathname === '#about' ? 'active' : ''}`}>About Us</Link>
         <Link href="#menu" className={`uppercase text-base text-black relative ${pathname === '#menu' ? 'active' : ''}`}>junior school</Link>
