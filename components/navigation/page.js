@@ -38,24 +38,23 @@ export default function Navigation() {
   // }, [open]);
 
   return (
-    <div className={`lg:fixed z-10 w-full h-32 bg-transparent flex lg:items-center justify-center p-10 navbar `}>
-     <div className="sidemenu lg:hidden" onClick={handleOpen}>
-          {open ? (
-            <FaTimes size={30} color={"#A67B5B"} onClick={() => closeMenu()} />
-          ) : (
-            <FaBars size={30} color={"#A67B5B"} />
-          )}
-        </div>
-        <div className={open ? "nav-menu active" : 'nav-menu flex gap-x-10'}>
-        <p className='uppercase text-7xl text-black ml-20 mr-20' style={{ fontFamily: 'nautilus_pompilius' }}>CPS</p>
-      
-        <Link href="/" className={`uppercase text-base text-black relative ${pathname === '/' ? 'active' : ''}`}>Home</Link>
-        <Link href="#about" className={`uppercase text-base text-black relative ${pathname === '#about' ? 'active' : ''}`}>About Us</Link>
-        <Link href="#menu" className={`uppercase text-base text-black relative ${pathname === '#menu' ? 'active' : ''}`}>junior school</Link>
-        <Link href="#gallery" className={`uppercase text-base text-black relative ${pathname === '#gallery' ? 'active' : ''}`}>senior school</Link>
-        <Link href="#order" className={`uppercase text-base text-black relative ${pathname === '/order' ? 'active' : ''}`}>admissions </Link>
-        <Link href="/contact" className={`uppercase text-base text-black relative ${pathname === '/contact' ? 'active' : ''}`}>Contact Us</Link>
+    <div className="fixed z-10 w-full h-32 bg-transparent flex items-center lg:justify-center justify-between p-10  ">
+      <div className="sidemenu lg:hidden" onClick={handleOpen}>
+        {open ? (
+          <FaTimes size={30} color="black" onClick={() => closeMenu()} />
+        ) : (
+          <FaBars size={30} color="black" />
+        )}
       </div>
+        <p className='uppercase text-7xl text-black lg:ml-20 lg:mr-20' style={{ fontFamily: 'nautilus_pompilius' }}>CPS</p>
+        <div className={open ? "nav-menu active" : 'nav-menu flex lg:items-center lg:justify-center gap-10'}>
+          <Link href="/" className={`uppercase text-base text-black relative ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+          <Link href="#about" className={`uppercase text-base text-black relative ${pathname === '#about' ? 'active' : ''}`}>About Us</Link>
+          <Link href="#menu" className={`uppercase text-base text-black relative ${pathname === '#menu' ? 'active' : ''}`}>junior school</Link>
+          <Link href="#gallery" className={`uppercase text-base text-black relative ${pathname === '#gallery' ? 'active' : ''}`}>senior school</Link>
+          <Link href="#order" className={`uppercase text-base text-black relative ${pathname === '/order' ? 'active' : ''}`}>admissions </Link>
+          <Link href="/contact" className={`uppercase text-base text-black relative ${pathname === '/contact' ? 'active' : ''}`}>Contact Us</Link>
+        </div>
     </div>
   );
 }
