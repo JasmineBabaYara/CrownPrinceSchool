@@ -3,6 +3,8 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
+import Image from "next/image";
+import logo from "../../public/images/logo.jpg"
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -14,31 +16,9 @@ export default function Navigation() {
 
   const closeMenu = () => setOpen(false);
 
-  //function to determine whether screen is being scrolled
-  // useEffect(() => {
-  //   //disable scroll on menu open
-  //   if (open === true) {
-  //     document.querySelector('body').style.overflow = 'hidden';
-  //   } else {
-  //     document.querySelector('body').style.overflow = 'scroll';
-  //   }
-  //   const handleScroll = () => {
-  //     const scrollPosition = window.scrollY;
-  //     const shouldAddBackground = scrollPosition > 0;
-
-  //     //if screen is moved add background color
-  //     setIsScrolled(shouldAddBackground);
-  //   };
-
-  //   window.addEventListener('scroll', handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener('scroll', handleScroll);
-  //   };
-  // }, [open]);
 
   return (
-    <div className="fixed z-10 w-full h-32 bg-transparent flex items-center lg:justify-center justify-between p-10  ">
+    <div className="fixed z-10 w-full h-32 bg-white flex items-center lg:justify-center justify-between p-10 border-b-2 border-gray-20 navbar">
       <div className="sidemenu lg:hidden" onClick={handleOpen}>
         {open ? (
           <FaTimes size={30} color="black" onClick={() => closeMenu()} />
@@ -46,14 +26,14 @@ export default function Navigation() {
           <FaBars size={30} color="black" />
         )}
       </div>
-        <p className='uppercase text-7xl text-black lg:ml-20 lg:mr-20' style={{ fontFamily: 'nautilus_pompilius' }}>CPS</p>
+      <Image src={logo} alt="logo" width="200" height="200" className='' />
         <div className={open ? "nav-menu active" : 'nav-menu flex lg:items-center lg:justify-center gap-10'}>
-          <Link href="/" className={`uppercase text-base text-black relative ${pathname === '/' ? 'active' : ''}`}>Home</Link>
-          <Link href="#about" className={`uppercase text-base text-black relative ${pathname === '#about' ? 'active' : ''}`}>About Us</Link>
-          <Link href="#menu" className={`uppercase text-base text-black relative ${pathname === '#menu' ? 'active' : ''}`}>junior school</Link>
-          <Link href="#gallery" className={`uppercase text-base text-black relative ${pathname === '#gallery' ? 'active' : ''}`}>senior school</Link>
-          <Link href="#order" className={`uppercase text-base text-black relative ${pathname === '/order' ? 'active' : ''}`}>admissions </Link>
-          <Link href="/contact" className={`uppercase text-base text-black relative ${pathname === '/contact' ? 'active' : ''}`}>Contact Us</Link>
+          <Link href="/" className={`uppercase text-base text-black relative hover:text-[#f7d449] ${pathname === '/' ? 'active' : ''}`}>Home</Link>
+          <Link href="#about" className={`uppercase text-base text-black relative hover:text-[#f7d449] ${pathname === '#about' ? 'active' : ''}`}>About Us</Link>
+          <Link href="#menu" className={`uppercase text-base text-black relative hover:text-[#f7d449] ${pathname === '#menu' ? 'active' : ''}`}>junior school</Link>
+          <Link href="#gallery" className={`uppercase text-base text-black relative hover:text-[#f7d449] ${pathname === '#gallery' ? 'active' : ''}`}>senior school</Link>
+          <Link href="#order" className={`uppercase text-base text-black relative hover:text-[#f7d449] ${pathname === '/order' ? 'active' : ''}`}>admissions </Link>
+          <Link href="/contact" className={`uppercase text-base text-black relative hover:text-[#f7d449] ${pathname === '/contact' ? 'active' : ''}`}>Contact Us</Link>
         </div>
     </div>
   );
