@@ -2,7 +2,7 @@ import React from 'react';
 import Navigation from '@/components/navigation/page';
 import Footer from '@/components/footer/page';
 import Image from "next/image";
-import construction from "../public/images/construction.png";
+// import construction from "../public/images/construction.png";
 import  Home  from './home/page';
 
 export default function page() {
