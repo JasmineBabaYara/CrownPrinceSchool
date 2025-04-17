@@ -4,7 +4,7 @@ import { usePathname } from 'next/navigation';
 import React, { useState, useEffect } from 'react';
 import { FaBars, FaTimes } from "react-icons/fa";
 import Image from "next/image";
-import logo from "../../public/images/logo.jpg"
+// import logo from "../../public/images/logo.jpg"
 
 export default function Navigation() {
   const pathname = usePathname();
@@ -26,7 +26,7 @@ export default function Navigation() {
           <FaBars size={30} color="black" />
         )}
       </div>
-      <Image src={logo} alt="logo" width="200" height="200"  />
+      <Image src="/images/logo.jpg" alt="logo" width="200" height="200"  />
         <div className={open ? "nav-menu active" : 'nav-menu flex lg:items-center lg:justify-center gap-10'}>
           <Link href="/" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '/' ? 'active' : ''}`} onClick={() => closeMenu()} >Home</Link>
           <Link href="/#about" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '#about' ? 'active' : ''}`}>About Us</Link>
