@@ -5,7 +5,7 @@ import logo from "../../public/images/logo.jpg"
 
 export default function page() {
   return (
-    <div className="sm:pt-20 pt-10 h-screen bg-white flex items-center justify-center content-center">
+    <div className="sm:pt-20 pt-10 h-screen bg-white flex items-center justify-center content-center header">
       <section className="">
         <div className='block'>
         {/* <Image src={logo} alt="logo" width="500" height="500" className='' /> */}
