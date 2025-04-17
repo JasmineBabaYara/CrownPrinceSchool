@@ -46,12 +46,12 @@ body {
 
 /* Styling for active link */
 .navbar a.active {
-  border-bottom: 2px solid #fdcb03; /* Permanent underline */
-  color: #fdcb03; /* Highlight active link */
+  border-bottom: 2px solid #d8bf30; /* Permanent underline */
+  color: #d8bf30; /* Highlight active link */
 }
 
 
-@media screen and (max-width: 940px) {
+@media screen and (max-width: 1023px) {
   .header {
     background-color: #fff;
     backdrop-filter: none;
