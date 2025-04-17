@@ -50,6 +50,13 @@ body {
   color: #d8bf30; /* Highlight active link */
 }
 
+.header {
+  background-image:linear-gradient(0deg, rgba(210, 209, 201, 0.675) ,rgba(210, 209, 201, 0.675)), url(../public/images/home2.JPG);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
 
 @media screen and (max-width: 1023px) {
   .header {
