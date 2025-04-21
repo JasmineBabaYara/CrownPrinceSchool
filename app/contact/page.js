@@ -1,14 +1,18 @@
-import React from 'react'
+import React from 'react';
+import Image from "next/image";
+// import construction from "../../public/images/construction.png";
+import Navigation from '@/components/navigation/page';
 
-export default function () {
-    return (
-        <div className="relative bottom">
-            <div className="grid grid-cols-3">
-
-            </div>
-            <div className="flex items-center justify-center bg-[#cd060e]">
-                <p className="text-white text-sm font-sans">© 2025 by Finland International School Maldives | Terms of Use | Privacy Policy</p>
-            </div>
-        </div>
-    )
+export default function page() {
+  return (
+    <>
+ <Navigation />
+    <div className='flex flex-col items-center justify-center h-screen bg-white'>
+       
+            <Image src="/images/construction.png" width="700" height="1000" />
+            <p className='text-5xl text-[#2c2c2c6e] font-bold mt-8'>COMING SOON</p>
+            <p className='text-sm text-[#515151] mt-4'>The page you’re looking for is not available at the moment. Kindly revisit later.</p>
+          </div>
+          </>
+  )
 }
