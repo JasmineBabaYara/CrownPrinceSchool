@@ -29,9 +29,9 @@ export default function Navigation() {
       <Image src="/images/logo.png" alt="logo" width="100" height="100" className='lg:mr-10' />
         <div className={open ? "nav-menu active" : 'nav-menu flex lg:items-center lg:justify-center gap-10'}>
           <Link href="/" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '/' ? 'active' : ''}`} onClick={() => closeMenu()} >Home</Link>
-          <Link href="/#about" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '#about' ? 'active' : ''}`}>About Us</Link>
-          <Link href="/#menu" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '#menu' ? 'active' : ''}`}>junior school</Link>
-          <Link href="/#gallery" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '#gallery' ? 'active' : ''}`}>senior school</Link>
+          <Link href="/about" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '/about' ? 'active' : ''}`}>About Us</Link>
+          <Link href="/juniorSchool" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '/juniorSchool' ? 'active' : ''}`}>junior school</Link>
+          <Link href="/seniorSchool" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '/seniorSchool' ? 'active' : ''}`}>senior school</Link>
           <Link href="/admissions" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '/admissions' ? 'active' : ''}`}>admissions </Link>
           <Link href="/contact" className={`uppercase text-base text-black relative hover:text-[#d8bf30] ${pathname === '/contact' ? 'active' : ''}`}>Contact Us</Link>
         </div>

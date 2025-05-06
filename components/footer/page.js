@@ -16,9 +16,16 @@ export default function page() {
                <div className="text-black text-base flex items-center gap-2 mt-1 font-mono"> <p className="font-semibold">Call: </p><a href="tel:+233551507812">+233551507812</a> </div>
                <p className="text-black text-base mt-3 font-mono">Ghana - Kumasi, Buokrom Estate</p>
                 </div>
-                <div className='flex flex-col items-center'>
-                  <div className='flex items-center gap-8'></div>
-                  <div className='flex items-center gap-4'>
+                <div className='flex flex-col items-center justify-between'>
+                  <div className='flex flex-col items-center'>
+                  <p className="text-black text-xl font-bold font-sans">Accredited Member of </p>
+                  <div className='flex items-center gap-8'>
+                    <Image src="/images/GES.jpg" width="250" height="200" />
+                    <Image src="/images/nasia.jpg" width="250" height="200" />
+                  </div>
+                  </div>
+
+                  <div className='flex items-center gap-4 '>
                   <FaFacebookSquare size={50} color='blue'/>
                   <FaInstagramSquare size={50} color='red' />
                   <FaSquareXTwitter size={50} color='black' />
