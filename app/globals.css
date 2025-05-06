@@ -57,6 +57,10 @@ body {
   background-size: cover;
 }
 
+.homeSecond{
+  background-image:linear-gradient(0deg, rgba(191, 199, 209, 0.675) ,rgba(191, 199, 209, 0.67)), url(../public/images/homeSecond2.JPG);
+}
+
 
 @media screen and (max-width: 1023px) {
   .header {
