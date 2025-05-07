@@ -21,7 +21,7 @@ export default function page() {
       </section>
       <section className='xl:grid flex flex-col grid-cols-2 mt-2 gap-2'>
         <div className="flex items-center justify-center homeSecond w-full">
-          <p className="text-xl font-mono text-black font-semibold p-12 leading-loose italic text-center">At Crown Prince School, we are a committed learning community focused on empowering every student to thrive academically and personally. Guided by a passion for excellence in education, we believe every child deserves a strong foundation for a bright and successful future.</p>
+          <p className="sm:text-xl text-lg font-mono text-black font-semibold p-12 leading-loose italic text-center">At Crown Prince School, we are a committed learning community focused on empowering every student to thrive academically and personally. Guided by a passion for excellence in education, we believe every child deserves a strong foundation for a bright and successful future.</p>
         </div>
         <div>
           <img src="/images/homeSecond.jpg" width="100%"  />
@@ -59,7 +59,7 @@ export default function page() {
       </section>
       <section className="flex flex-col items-center mt-6">
         <div className="bg-[#0e2973]">
-          <p className="text-2xl text-white font-medium font-mono text-center lg:p-20 p-2 leading-loose">At Crown Prince School, we aim to spark a lifelong love for learning. Our child-centered approach, guided by the Finnish curriculum, emphasizes cross-curricular themes and collaborative teaching to support every learner’s growth</p>
+          <p className="lg:text-2xl text-lg text-white font-medium font-mono text-center lg:p-20 p-2 leading-loose">At Crown Prince School, we aim to spark a lifelong love for learning. Our child-centered approach, guided by the Finnish curriculum, emphasizes cross-curricular themes and collaborative teaching to support every learner’s growth</p>
         </div>
         <img src="/images/homefooter.jpg" width="auto" height="" className='' />
       </section>
