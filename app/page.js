@@ -22,11 +22,11 @@ export default function page() {
       <img src='/images/logo.png' className="lg:w-80 w-40 animate-pulse"/>
       </div>
     :    
-     <div className=' bg-white'>
+     <>
       <Navigation />
       <Home/>
       <Footer /> 
-    </div>
+    </>
     }
 
     </>
