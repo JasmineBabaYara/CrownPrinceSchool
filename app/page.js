@@ -1,4 +1,5 @@
-import React from 'react';
+"use client"
+import React, {useState, useEffect} from 'react';
 import Navigation from '@/components/navigation/page';
 import Footer from '@/components/footer/page';
 import Image from "next/image";
@@ -6,17 +7,28 @@ import Image from "next/image";
 import  Home  from './home/page';
 
 export default function page() {
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(()=> 
+  {
+    const timer = setTimeout(()=> setIsLoading(false), 1000);
+    return()=> clearTimeout(timer);
+  }, []);
+
   return (
-    <div className=' bg-white'>
+    <>
+    {isLoading ? 
+    <div className='fixed top-0 left-0 w-full h-full bg-white z-50 flex items-center justify-center '>
+      <img src='/images/logo.png' className="lg:w-80 w-40 animate-pulse"/>
+      </div>
+    :    
+     <div className=' bg-white'>
       <Navigation />
       <Home/>
-      <Footer />
-      {/* <div className='flex flex-col items-center justify-center h-screen'>
-        <Image src={construction} width="700" height="1000" />
-        <p className='text-5xl text-[#2c2c2c6e] font-bold mt-8'>COMING SOON</p>
-        <p className='text-sm text-[#515151] mt-4'>The page you’re looking for is not available at the moment. Kindly revisit later.</p>
-      </div> */}
-      
+      <Footer /> 
     </div>
+    }
+
+    </>
   )
 }
