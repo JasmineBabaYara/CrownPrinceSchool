@@ -22,7 +22,7 @@ export default function page() {
         <div className="bg-[#e63888] p-10 text-white text-3xl font-medium text-center">
           <p>The focus must always be in learning.</p>
 
-<p>The fundamental tool for that is collaboration.</p>
+          <p>The fundamental tool for that is collaboration.</p>
         </div>
       </section>
       <Footer />
