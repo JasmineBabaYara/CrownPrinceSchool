@@ -1,6 +1,5 @@
 import React from 'react';
 import Image from "next/image";
-// import construction from "../../public/images/construction.png";
 import Navigation from '@/components/navigation/page';
 import Footer from '@/components/footer/page';
 
@@ -25,6 +24,12 @@ export default function page() {
           <p>The fundamental tool for that is collaboration.</p>
         </div>
       </section>
+      <section>
+        <div>
+          <p>Our Vision</p>
+        </div>
+      </section>
+
       <Footer />
     </>
   )
