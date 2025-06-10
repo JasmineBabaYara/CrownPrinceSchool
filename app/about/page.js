@@ -24,9 +24,11 @@ export default function page() {
           <p>The fundamental tool for that is collaboration.</p>
         </div>
       </section>
-      <section>
-        <div>
+      <section className="bg-white grid grid-cols-2 text-black">
+        <div >
           <p>Our Vision</p>
+          <p>Finland International School Maldives is built on experiences and know-how from the Finnish education system in respect of Maldivian culture to cherish students’ joy of learning and to encourage teachers’ pedagogical collaboration leading to success.</p>
+       <img src="/images/" alt="vision"/>
         </div>
       </section>
 
